@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gradient Future</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centrino Tech</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- 🌐 Navigation Bar -->
   <nav>
-    <div class="logo">Gradient.</div>
+    <div class="logo">Centrino</div>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Portfolio</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
     </ul>
   </nav>
 
+  <!-- 🏠 Hero Section -->
   <section class="hero">
     <div class="text">
-      <h1>Design</h1>
-      <p>is a formal response to a strategic question.</p>
-      <button onclick="loadServices()">View Services</button>
+      <h1>Modern & Futuristic</h1>
+      <p>We design experiences that move your brand forward 🚀</p>
+      <button onclick="loadServices()">Explore Services</button>
     </div>
     <div class="image">
-      <img src="your-image.jpg" alt="Design">
+      <img src="your-image.jpg" alt="Hero" />
     </div>
+  </section>
+
+  <!-- 🧰 Services Section -->
+  <section id="services" class="content-section">
+    <h2>Our Services</h2>
+    <ul id="services-list"></ul>
+  </section>
+
+  <!-- 🧠 About Section -->
+  <section id="about" class="content-section">
+    <h2>About Us</h2>
+    <p id="about-text"></p>
+  </section>
+
+  <!-- 🧑‍💻 Careers Section -->
+  <section id="careers" class="content-section">
+    <h2>Careers</h2>
+    <ul id="careers-list"></ul>
   </section>
 
   <script src="script.js"></script>

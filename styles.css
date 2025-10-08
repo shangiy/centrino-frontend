@@ -1,14 +1,15 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #f9d423, #e14fad);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 20px 40px;
 }
 
 nav ul {
@@ -17,11 +18,22 @@ nav ul {
   gap: 20px;
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00e0ff;
+}
+
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px;
+  padding: 80px 40px;
 }
 
 .hero .image img {
@@ -30,16 +42,39 @@ nav ul {
 }
 
 button {
-  background: white;
-  color: #e14fad;
-  padding: 10px 20px;
+  background: #00e0ff;
+  color: #000;
+  padding: 12px 25px;
   border: none;
   border-radius: 25px;
   cursor: pointer;
+  font-size: 16px;
   transition: all 0.3s;
 }
 
 button:hover {
-  background: #e14fad;
-  color: white;
+  background: white;
+  color: #000;
+}
+
+.content-section {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.content-section h2 {
+  margin-bottom: 20px;
+}
+
+.content-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-section ul li {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
 }
