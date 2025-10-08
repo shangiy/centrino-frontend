@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #f9d423, #e14fad);
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+}
+
+.hero .image img {
+  width: 400px;
+  clip-path: path("M315.8,46.7c30.5-2.4,63.8,1.2,79,13.8s3.5,50.3-11.3,75.5s-36.8,38.8-69.7,50.6s-67.7,8.2-92.6-8.3s-41-48.5-37-75.6S285.3,49.1,315.8,46.7z");
+}
+
+button {
+  background: white;
+  color: #e14fad;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #e14fad;
+  color: white;
+}
