@@ -7,23 +7,52 @@
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header>
-    <div class="logo">Centrino<span>Tech</span></div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li class="dropdown">
-          <a href="#">Services ▾</a>
-          <ul class="dropdown-menu" id="services-list">
-            <!-- dynamically populated -->
-          </ul>
-        </li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Portfolio</a></li>
-      </ul>
-    </nav>
+  <!-- 🌟 Header -->
+  <header class="w-full bg-white shadow-sm py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <img src="images/logo.png" alt="Centrino Logo" class="h-10">
+      </div>
+
+      <!-- Navigation Links (centered) -->
+      <nav class="flex-1">
+        <ul class="flex justify-center space-x-10 font-semibold text-gray-800">
+          <li><a href="#" class="hover:text-pink-700 transition">Home</a></li>
+          <li><a href="#" class="hover:text-pink-700 transition">About Us</a></li>
+          <li><a href="#" class="hover:text-pink-700 transition">Services</a></li>
+          <li><a href="#" class="hover:text-pink-700 transition">Careers</a></li>
+          <li><a href="#" class="hover:text-pink-700 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
+<section class="w-full bg-gradient-to-r from-white via-pink-50 to-purple-100/60 dark:from-gray-900 dark:via-purple-950/20 dark:to-purple-950/40">
+  <div class="container grid lg:grid-cols-5 gap-8 items-center py-12 md:py-24">
+    <div class="space-y-6 text-left lg:col-span-3">
+      <span class="border border-primary/50 text-primary font-semibold px-3 py-1 rounded">WELCOME TO CENTRINO TECHNOLOGIES</span>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter font-headline">
+        Smarter Tech Solutions for <span class="text-primary">Financial Institutions</span>
+      </h1>
+      <p class="max-w-[600px] text-muted-foreground text-lg">
+        We empower financial institutions with innovative software solutions...
+      </p>
+      <a href="/about" class="inline-block bg-primary text-white px-6 py-3 rounded-lg">Discover More</a>
+    </div>
+    <div
+      class="relative w-full aspect-square max-w-[450px] mx-auto lg:col-span-2 overflow-hidden"
+      style='clip-path: path("M315.8,46.7c30.5-2.4,63.8,1.2,79,13.8s3.5,50.3-11.3,75.5s-40.6,48-70.1,54s-64.4-7.4-84.1-28.4 s-26.4-52.8-18.6-80.6s33.8-56,71-62S287.2,49,315.8,46.7z");'
+    >
+      <img
+        src="images/landingpage-image.png"
+        alt="Business discussion"
+        class="absolute inset-0 w-full h-full object-cover scale-[1.0] translate-x-[100px] origin-center transition-transform duration-700 ease-out"
+      />
+    </div>
+  </div>
+</section>
+
 
   <section class="hero">
     <div class="text-box">
@@ -36,10 +65,15 @@
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Centrino Technologies | All Rights Reserved</p>
+  <!-- 🧾 Footer -->
+  <footer class="bg-white border-t py-4">
+    <div class="container mx-auto text-center text-gray-600 text-sm">
+      &copy; 2025 Centrino Technologies. All Rights Reserved.
+    </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
+

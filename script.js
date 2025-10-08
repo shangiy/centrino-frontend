@@ -1,45 +1,28 @@
-// Replace this URL with your actual Render API URL
-const API_URL = "https://centrino-backend.onrender.com/api";
+// Replace with your actual Render backend URL
+const API_BASE = "https://centrino-backend.onrender.com/api";
 
-async function loadServices() {
-  const res = await fetch(`${API_URL}/services`);
-  const data = await res.json();
+async function fetchServices() {
+  try {
+    const res = await fetch(`${API_BASE}/services`);
+    const data = await res.json();
 
-  const list = document.getElementById("services-list");
-  list.innerHTML = ""; // clear previous
-
-  data.services.forEach(service => {
-    const li = document.createElement("li");
-    li.textContent = service;
-    list.appendChild(li);
-  });
-
-  // Smooth scroll to services section
-  document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+    const list = document.getElementById('services-list');
+    list.innerHTML = '';
+    data.services.forEach(service => {
+      const li = document.createElement('li');
+      li.textContent = service;
+      list.appendChild(li);
+    });
+  } catch (err) {
+    console.error("Failed to fetch services", err);
+  }
 }
 
-async function loadAbout() {
-  const res = await fetch(`${API_URL}/about`);
-  const data = await res.json();
-  document.getElementById("about-text").textContent = data.about;
-}
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.getElementById('nav-menu');
 
-async function loadCareers() {
-  const res = await fetch(`${API_URL}/careers`);
-  const data = await res.json();
-
-  const list = document.getElementById("careers-list");
-  list.innerHTML = "";
-
-  data.positions.forEach(job => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${job.title}</strong> — ${job.type} (${job.location})`;
-    list.appendChild(li);
-  });
-}
-
-// Auto-load sections on page load
-document.addEventListener("DOMContentLoaded", () => {
-  loadAbout();
-  loadCareers();
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
 });
+
+fetchServices();
