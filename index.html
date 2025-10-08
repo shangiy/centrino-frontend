@@ -2,52 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Centrino Tech</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centrino Technologies</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <!-- 🌐 Navigation Bar -->
-  <nav>
-    <div class="logo">Centrino</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#careers">Careers</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="logo">Centrino<span>Tech</span></div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li class="dropdown">
+          <a href="#">Services ▾</a>
+          <ul class="dropdown-menu" id="services-list">
+            <!-- dynamically populated -->
+          </ul>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- 🏠 Hero Section -->
   <section class="hero">
-    <div class="text">
-      <h1>Modern & Futuristic</h1>
-      <p>We design experiences that move your brand forward 🚀</p>
-      <button onclick="loadServices()">Explore Services</button>
+    <div class="text-box">
+      <h1>Smarter Tech Solutions for<br><span>Financial Institutions</span></h1>
+      <p>We empower financial institutions with innovative software solutions to simplify complex needs, enhance customer experiences, and drive growth.</p>
+      <a href="#" class="btn">Discover More</a>
     </div>
-    <div class="image">
-      <img src="your-image.jpg" alt="Hero" />
+    <div class="img-box">
+      <img src="images/team.jpg" alt="Centrino Team" />
     </div>
   </section>
 
-  <!-- 🧰 Services Section -->
-  <section id="services" class="content-section">
-    <h2>Our Services</h2>
-    <ul id="services-list"></ul>
-  </section>
-
-  <!-- 🧠 About Section -->
-  <section id="about" class="content-section">
-    <h2>About Us</h2>
-    <p id="about-text"></p>
-  </section>
-
-  <!-- 🧑‍💻 Careers Section -->
-  <section id="careers" class="content-section">
-    <h2>Careers</h2>
-    <ul id="careers-list"></ul>
-  </section>
+  <footer>
+    <p>© 2025 Centrino Technologies | All Rights Reserved</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
